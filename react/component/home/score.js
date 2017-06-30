@@ -75,7 +75,8 @@ import Global from '../config/Global'
                         </TouchableHighlight>
                     </View>
                 }
-                <ListView dataSource={this.state.dataSourceMatch}
+                <ListView
+                          dataSource={this.state.dataSourceMatch}
                           renderRow={this.renderData}
                           style={styles.listView}/>
             </View>
@@ -88,7 +89,8 @@ import Global from '../config/Global'
 
     renderData(score){
         return(
-            <ScoreItem scoreItem={score}/>
+            <ScoreItem
+                scoreItem={score}/>
         );
     }
 

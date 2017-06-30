@@ -54,3 +54,7 @@ fastlane/screenshots
 
 /__tests__/
 /node_modules/
+
+.idea/instapk.xml
+instapk.log*
+/.hgignore

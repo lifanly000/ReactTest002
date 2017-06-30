@@ -20,6 +20,8 @@ const height = Dimensions.get('window').height;
 class ScoreItem extends Component{
 
     onPressCallback (scoreItem) {
+        // const {navigate} = this.props.navigation;
+        // navigate('MatchDetail', null);
         ToastAndroid.show(scoreItem.matchId, ToastAndroid.SHORT);
     };
 

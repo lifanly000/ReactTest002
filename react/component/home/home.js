@@ -49,9 +49,18 @@ class Home extends Component{
 
     renderBanner(banners){
         return(
-            <Swiper style={styles.wrapper} showsButtons={false} autoplay={true}>
-                {banners.map((item,i)=>this.renderBannerItem(item,i))}
-            </Swiper>
+            <View style = {{flex:1}}>
+                <View style={styles.swiperContainer}>
+                    <Swiper style={styles.wrapper} showsButtons={false} autoplay={true} showsPagination={true} width = {Width} height={150}
+
+                    >
+                        {banners.map((item,i)=>this.renderBannerItem(item,i))}
+                    </Swiper>
+                </View>
+                {/*<View style = {{flex:1,backgroundColor:'#ffffff'}}>*/}
+                    {/*<Text>RETAIN</Text>*/}
+                {/*</View>*/}
+            </View>
         );
     }
 
@@ -87,26 +96,33 @@ class Home extends Component{
 }
 
 const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+    },
+    swiperContainer:{
+        height:150,
+        width:Width,
+    },
     wrapper: {
-        height:300,
+        // height:300,
     },
     slide1: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        height:200,
+        height:150,
     },
     slide2: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#97CAE5',
-        height:200,
+        height:150,
     },
     slide3: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#92BBD9',
-        height:200,
+        height:150,
     },
     text: {
         color: '#fff',
